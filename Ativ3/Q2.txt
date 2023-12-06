@@ -1,0 +1,51 @@
+Escolha e baixe um arquivo csv a partir do link e use-o nas questões a seguir. Na resolução desta questão, não enviar os arquivos envolvidos, 
+mas somente os resultados pedidos em arquivo texto com extensão txt. Envie somente o link do arquivo CSV escolhido.
+
+Gere as somas checksum, md5, sha1 e sha256 do arquivo csv escolhido, usando utilitários de linha de comando do próprio sistema operacional ou instalado nele.
+Compare os tempos de execução e tamanhos dos arquivos gerados. Dica: para obter o tempo de execução, use o comando time.
+
+Arquivo utilizado: https://zenodo.org/record/3469741/files/2014_12-Traffic_Sensors_Fortaleza.csv?download=1
+
+md5 referencial:221441f75669473075de972f7b6b5c77
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.: Teste md5
+
+221441f75669473075de972f7b6b5c77  2014_12-Traffic_Sensors_Fortaleza.csv
+
+real    0m1.839s
+user    0m0.682s
+sys     0m0.144s
+
+2.: Teste checksum
+
+2879234602 470766419 2014_12-Traffic_Sensors_Fortaleza.csv
+
+real    0m2.523s
+user    0m1.114s
+sys     0m0.123s
+
+3.: Teste sha1
+
+f62df1edd30cd10449a707f02bec8be249042efd  2014_12-Traffic_Sensors_Fortaleza.csv
+
+real    0m2.157s
+user    0m0.760s
+sys     0m0.161s
+
+4.: Teste sha256
+
+457559f591cfa639dae6e81bb40a2ee2d52a4a46dbe38a1a02843dc5b7959d9c  2014_12-Traffic_Sensors_Fortaleza.csv
+
+real    0m3.243s
+user    0m1.922s
+sys     0m0.104s
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Analise:
+O arquivo se manteve integro pois o md5 referencial disponibilizado no poprio site foi o mesmo gerado pelo sistema.
+
+O MD5 foi o algoritmo mais rápido, levando apenas 1.839 segundos para calcular o hash. O SHA-1 também foi relativamente rápido, seguido pelo Checksum e, por fim, o SHA-256, 
+que foi o mais lento. Os valores de hash gerados pelo MD5, SHA-1 e SHA-256 têm tamanhos diferentes. O MD5 produz hashes de 128 bits, o SHA-1 produz hashes de 160 bits e o 
+SHA-256 produz hashes de 256 bits. O Checksum não é um algoritmo de hash no mesmo sentido, pois produz valores numéricos. 
